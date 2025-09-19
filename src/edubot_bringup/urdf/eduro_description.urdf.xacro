@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="eduro" >
+  
+  <link  name="base_footprint">
+  </link>
+  <link
+    name="base_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="13.072723" />
+      <inertia
+        ixx="0.18142415"
+        ixy="-0.0002844"
+        ixz="-0.00557763"
+        iyy="0.20788446"
+        iyz="-4.221E-05"
+        izz="0.29582098" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/base_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/base_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0523963621561536 -1.55230000002776E-05 0.118859223090854"
+      rpy="0 0 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.34675" />
+      <inertia
+        ixx="0.0006489"
+        ixy="0"
+        ixz="0"
+        iyy="0.001271"
+        iyz="0"
+        izz="0.0006489" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/right_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/right_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.0523963621561544 -0.193478459 -0.0438592230908529"
+      rpy="0 0 0" />
+    <parent
+      link="base_Link" />
+    <child
+      link="right_wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="left_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.34675" />
+      <inertia
+        ixx="0.0006489"
+        ixy="0"
+        ixz="0"
+        iyy="0.001271"
+        iyz="0"
+        izz="0.0006489" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/left_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/left_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.052396362156153 0.193509505 -0.0438592230908542"
+      rpy="0 0 0" />
+    <parent
+      link="base_Link" />
+    <child
+      link="left_wheel_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="caster_wheel_Link1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.15875" />
+      <inertia
+        ixx="4.83E-05"
+        ixy="0"
+        ixz="0"
+        iyy="5.217E-05"
+        iyz="0"
+        izz="4.294E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/caster_wheel_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/caster_wheel_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_joint1"
+    type="fixed">
+    <origin
+      xyz="-0.22523 1.5165E-05 -0.059419"
+      rpy="0 0 0" />
+    <parent
+      link="base_Link" />
+    <child
+      link="caster_wheel_Link1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="caster_wheel_Link2">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.036792" />
+      <inertia
+        ixx="7.4436E-06"
+        ixy="0"
+        ixz="0"
+        iyy="1.2795E-05"
+        iyz="0"
+        izz="7.4436E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/caster_wheel_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/caster_wheel_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_wheel_joint2"
+    type="fixed">
+    <origin
+      xyz="-0.021379 0 -0.03444"
+      rpy="0 0 0" />
+    <parent
+      link="caster_wheel_Link1" />
+    <child
+      link="caster_wheel_Link2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="camera_link">
+    <inertial>
+      <origin
+        xyz="-0.033493 -0.0175 -0.0052282"
+        rpy="0 0 0" />
+      <mass
+        value="0.076213" />
+      <inertia
+        ixx="5.7704E-05"
+        ixy="6.8829E-20"
+        ixz="-3.391E-07"
+        iyy="7.4478E-06"
+        iyz="1.0525E-19"
+        izz="5.985E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.215033973175765 0.0175155229999973 0.126428387824757"
+      rpy="0 0 0" />
+    <parent
+      link="base_Link" />
+    <child
+      link="camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Lidar_Link">
+    <inertial>
+      <origin
+        xyz="-0.013504 -0.00050756 -0.0062451"
+        rpy="0 0 0" />
+      <mass
+        value="0.23332" />
+      <inertia
+        ixx="9.9832E-05"
+        ixy="-1.4969E-06"
+        ixz="1.2739E-05"
+        iyy="0.00016209"
+        iyz="-8.0854E-08"
+        izz="0.00024687" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/Lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/Lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.251325565829353 1.55230000012813E-05 0.0927115732359418"
+      rpy="0 0 0" />
+    <parent
+      link="base_Link" />
+    <child
+      link="Lidar_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="robopads_Link">
+    <inertial>
+      <origin
+        xyz="-0.028726 -1.7647E-16 2.2898E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.48218" />
+      <inertia
+        ixx="0.00141423"
+        ixy="0"
+        ixz="0"
+        iyy="0.00020317"
+        iyz="0"
+        izz="0.00140436" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/robopads_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://eduro_description/meshes/robopads_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="robopads_joint"
+    type="fixed">
+    <origin
+      xyz="0.253396362156155 1.55230000039606E-05 -0.0348592230908565"
+      rpy="0 0 0" />
+    <parent
+      link="base_Link" />
+    <child
+      link="robopads_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+
+
+
+  <xacro:macro name="wheel_parameters" params="reference">
+    <gazebo reference="${reference}">
+      <material>Gazebo/Black</material>
+      <mu1 value="1"/>
+      <mu2 value="1"/>
+      <fdir1 value="1 1 0"/>
+      <kp value="10000000.0" />
+      <kd value="1.0" />
+    </gazebo>
+  </xacro:macro>
+
+
+
+   <xacro:wheel_parameters reference="right_wheel_Link">
+   </xacro:wheel_parameters>
+
+
+   <xacro:wheel_parameters reference="left_wheel_Link">
+   </xacro:wheel_parameters>
+
+
+   <xacro:wheel_parameters reference="caster_wheel_Link2">
+   </xacro:wheel_parameters>
+
+
+
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="right_wheel_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="left_wheel_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/eduro</robotNamespace>
+    </plugin>
+  </gazebo>
+
+
+
+  <gazebo reference="Lidar_Link">
+      <sensor type="ray" name="lidar_sensor">
+        <pose>0 0 0.05 0 0 3.14</pose>
+        <visualize>false</visualize>
+        <update_rate>10</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>720</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.41372</min_angle>
+              <max_angle>1.41372</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.15</min>
+            <max>8.0</max>
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+        <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+          <topicName>/scan</topicName>
+          <frameName>scan</frameName>
+        </plugin>
+      </sensor>
+  </gazebo>
+
+
+
+  <gazebo>
+    <plugin name="fake_gps" filename="libgazebo_ros_p3d.so">
+      <frameName>world</frameName>
+      <bodyName>base_footprint</bodyName>
+      <topicName>ground_truth</topicName>
+      <updateRate>30</updateRate>
+      <gaussianNoise>0.0</gaussianNoise>
+      <xyzOffset>0.0 0.00 0.0</xyzOffset>
+      <rpyOffset>0.0 0.0 0.0</rpyOffset>
+    </plugin>
+  </gazebo>
+
+
+
+  <gazebo reference="camera_link">
+    <sensor type="camera" name="realsense_cam">
+      <always_on>true</always_on>
+      <visualize>0</visualize>
+      <camera>
+          <horizontal_fov>1.211258</horizontal_fov>
+          <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+          </image>
+          <clip>
+              <near>0.03</near>
+              <far>100</far>
+          </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>30.0</updateRate>
+        <cameraName>camera</cameraName>
+        <frameName>camera_color_optical_frame</frameName>
+        <imageTopicName>color/image_raw</imageTopicName>
+        <cameraInfoTopicName>color/camera_info</cameraInfoTopicName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="fake_gps" filename="libgazebo_ros_p3d.so">
+      <frameName>world</frameName>
+      <bodyName>base_footprint</bodyName>
+      <topicName>ground_truth</topicName>
+      <updateRate>100</updateRate>
+      <gaussianNoise>0.0</gaussianNoise>
+      <xyzOffset>0.0 0.00 0.0</xyzOffset>
+      <rpyOffset>0.0 0.0 0.0</rpyOffset>
+    </plugin>
+  </gazebo>
+
+
+</robot>

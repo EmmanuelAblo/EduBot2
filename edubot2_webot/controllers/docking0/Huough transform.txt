@@ -1,0 +1,6 @@
+Étape			Description
+1. img			Une image binaire créée à partir des points cartésiens.
+2. hough		Applique la transformée de Hough pour détecter les lignes.
+3. houghpeaks		Détecte les pics dans l’espace de Hough.
+4. houghlines		Extrait les lignes à partir des pics détectés.
+5. imshow + plot	Affiche l’image et les lignes détectées en vert.

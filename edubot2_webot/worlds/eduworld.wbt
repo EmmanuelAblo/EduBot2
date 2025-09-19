@@ -1,0 +1,207 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/PaintedWood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/street_furniture/protos/TrashBin.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/chairs/protos/OfficeChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/computers/protos/Monitor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/computers/protos/Keyboard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/bathroom/protos/WashingMachine.proto"
+EXTERNPROTO "../protos/Eduro.proto"
+
+WorldInfo {
+  info [
+    "This simulation enables to move around edubot2 in an environment using the keyboard"
+  ]
+  title "Simulation of Mobile educational Robot edubot2"
+  contactProperties [
+    ContactProperties {
+      material1 "wheel"
+      softCFM 0.0001
+    }
+    ContactProperties {
+      material1 "slope"
+      coulombFriction [
+        0.5
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position -5.4625364663466835e-06 -5.462551806393321e-06 17.386580911155004
+  exposure 0.7
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 7 6.3
+  floorAppearance ThreadMetalPlate {
+    colorOverride 0.8 0.6 0.5
+  }
+  wallThickness 0.2
+  wallHeight 1.4
+  wallAppearance Roughcast {
+    textureTransform TextureTransform {
+      scale 2 1
+    }
+  }
+}
+Wall {
+  translation -0.56 2.14 0
+  size 0.15 2 0.7
+}
+Wall {
+  translation -0.129304 1.07063 0
+  rotation 0 0 1 1.57
+  name "wall(3)"
+  size 0.15 1 0.7
+}
+CardboardBox {
+  translation -3.11 -0.04 0.3
+  rotation 0 0 1 3.46682e-06
+  name "cardboard box(1)"
+}
+CardboardBox {
+  translation -3.11 -0.67 0.3
+  name "cardboard box(2)"
+}
+TrashBin {
+  translation -0.53999 -2.65 0
+  rotation 0 0 1 1.5708
+}
+Wall {
+  translation 0.05 -2.48 0
+  name "wall(2)"
+  size 0.15 1.4 0.7
+}
+Cabinet {
+  hidden position_6_0 4.7177693831674884e-06
+  hidden translation_7 -1.8776722144753011e-06 -8.858663802513433e-12 0
+  hidden rotation_7 0 0 1 9.435530108799732e-06
+  hidden position_9_0 -4.012043228247674e-06
+  hidden translation_10 -1.3572742241014053e-06 5.4453663800302365e-12 0
+  hidden rotation_10 0 0 -1 8.024078140259344e-06
+  translation 3.48 0.25 0
+  rotation 0 0 1 3.14159
+  depth 0.4
+  handle NULL
+  primaryAppearance PaintedWood {
+    colorOverride 0.5 0.5 0.5
+  }
+  secondaryAppearance PaintedWood {
+    colorOverride 0.5 0.5 0.3
+  }
+}
+Cabinet {
+  hidden position_6_0 4.717769383172038e-06
+  hidden translation_7 -1.877672214476206e-06 -8.858663802513433e-12 0
+  hidden rotation_7 0 0 1 9.435530108799732e-06
+  hidden position_9_0 -4.012043227980962e-06
+  hidden translation_10 -1.3572742240122898e-06 5.4453663800302365e-12 0
+  hidden rotation_10 0 0 -1 8.024078140259344e-06
+  translation 3.49 1.07 0
+  rotation 0 0 1 3.14159
+  name "cabinet(1)"
+  depth 0.4
+  handle NULL
+  primaryAppearance PaintedWood {
+    colorOverride 0.5 0.5 0.5
+  }
+  secondaryAppearance PaintedWood {
+    colorOverride 0.5 0.5 0.3
+  }
+}
+Table {
+  translation 1.44 -1.77 0
+  rotation 0 0 1 1.5708
+  size 0.7 1.2 0.7
+}
+OfficeChair {
+  hidden position_0_0 -2.2079370181948832e-05
+  hidden rotation_1 0 0 -1 4.461641574762524e-05
+  translation 1.490000002568979 -2.3799998284521053 -0.0014153366566403147
+  rotation 0.0006975747108959965 -0.000707849099257965 0.9999995061694658 1.5707958088057874
+}
+Monitor {
+  translation 1.59 -1.73 0.69
+  rotation 0 0 1 -1.5707953071795862
+}
+Keyboard {
+  translation 1.58 -2 0.72
+  rotation 0 0 1 -1.5707953071795862
+}
+Pedestrian {
+  translation 2.48 0.96 1.27
+  rotation 0 0 1 1.01503e-06
+  shirtColor 0.2 0.7 0.5
+  skinColor 0.2 0.2 0.2
+}
+Eduro {
+  hidden linearVelocity_0 -9.53857164370104e-10 -6.450468298274322e-12 2.717221811610055e-14
+  hidden angularVelocity_0 -8.359967246519129e-13 2.122484433435895e-12 -5.404991242509847e-09
+  hidden position_1_0 -0.005166989183747361
+  hidden position_1_1 -0.13310224838697132
+  hidden position_1_2 -3.0844853287055813
+  hidden rotation_2 0.9080908660045837 0.2961168138636081 -0.2961179015633978 1.6670618045955257
+  hidden rotation_3 0.9399891104926236 0.24126753254324743 -0.24126841877000685 1.632647514606995
+  hidden rotation_4 0.0010899164928096577 0.7071076598661542 -0.7071050625194603 3.1437724777053093
+  hidden position_4_0 -10.44403034435283
+  hidden rotation_5 0 0 0.9999999999999999 2.1223402700063425
+  translation 0.0324073863729488 0.15967115193995285 -0.04280685306046195
+  rotation 0.010900237570082036 -0.010829662640843328 0.9998819446454671 1.5767162614528367
+  supervisor TRUE
+}
+WashingMachine {
+  translation -0.08 1.66 0.53
+}
+Solid {
+  translation -1.93 3.15 0.34
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../protos/Eduro_textures/tag_36h11_resized.png"
+          ]
+        }
+        metalness 0
+        IBLStrength 3
+        emissiveIntensity 0
+      }
+      geometry Box {
+        size 0.21 0.297 0.01
+      }
+    }
+  ]
+  name "tag"
+}
+Solid {
+  translation -2.07999 3 -0.000873003
+  rotation 0 1 0 -0.0007853071795862476
+  children [
+    Shape {
+      appearance Roughcast {
+        colorOverride 0.7 0.7 0.7
+      }
+      geometry Mesh {
+        url [
+          "../protos/meshes/dorcking_st.STL"
+        ]
+      }
+    }
+  ]
+  name "dorking station"
+}
