@@ -1,4 +1,4 @@
-# 🤖 EduBot2 – Autonomous Mobile Robot (Webots & ROS 2)
+# 🤖 EduBot2 – Autonomous Mobile Robot
 
 EduBot2 is a differential-drive autonomous robot developed as part of a Master’s thesis project.  
 It includes both **simulation in Webots** and **real-world deployment with ROS 2 (Humble)**.  
