@@ -8,31 +8,6 @@ The system integrates **SLAM, autonomous navigation, joystick teleoperation, and
 
 ## 📦 Packages Overview  
 
-### 🔹 `edubot_bringup` (Real Robot Deployment)  
-
-This package contains the ROS 2 nodes used on the physical EduBot2 robot.  
-
-**Nodes:**  
-- **`diff_driver.py`**  
-  - Handles motor communication via Modbus TCP/IP  
-  - Publishes odometry (`/odom`)  
-  - Subscribes to velocity commands (`/cmd_vel`)  
-  - Broadcasts TFs: `odom → base_footprint`  
-
-- **`joy_driver.py`**  
-  - Reads joystick input  
-  - Publishes `Twist` messages on `/cmd_vel`  
-
-- **`scan_filter.py`**  
-  - Filters RPLiDAR data to keep only the **front 180°**  
-  - Publishes filtered data on `/scan_filtered` for SLAM & Navigation  
-
-**Launch files:**  
-```bash
-ros2 launch edubot_bringup edubot_control.launch.py       # Robot control
-ros2 launch edubot_bringup edubot_navigation.launch.py    # Navigation with pre-existing map
-ros2 launch edubot_bringup edubot_slam.launch.py          # SLAM (map building)
-```
 ### 🔹 edubot_webots (Simulation in Webots + ROS 2)
 This package allows EduBot2 to be simulated in Webots with ROS 2 integration.
 
@@ -101,7 +76,7 @@ webots-controller.exe --interactive C:\...\edubot2_webot\controllers\controlleur
 ```
 
 ## 🚀 Features
-✅ ROS 2 Integration (real & simulated robot)
+✅ ROS 2 Integration (simulated robot)
 
 ✅ Webots simulation with SLAM Toolbox & Nav2
 
@@ -119,7 +94,6 @@ webots-controller.exe --interactive C:\...\edubot2_webot\controllers\controlleur
 ```bash
 edubot_ws/
 │── src/
-│   ├── edubot_bringup/      # Real robot nodes & launch files
 │   ├── edubot_webots/       # Webots simulation nodes & launch files
 │   ├── rplidar_ros/         # RPLidar driver package
 │
